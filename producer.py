@@ -29,4 +29,6 @@ if __name__ == '__main__':
         )
         time.sleep(random.randint(1, 5))
 
+    print('Done sending')
     producer.flush()
+    print('Buffer flush is complete')
