@@ -24,9 +24,9 @@ if __name__ == '__main__':
         producer.send(
             KAFKA_TOPIC_TEST,
             json.dumps({
-                'body': f'Message #{i}'
+                'message': f'Message #{i}'
             }).encode('utf-8')
         )
-        time.sleep(random(1, 5))
+        time.sleep(random.randint(1, 5))
 
     producer.flush()
